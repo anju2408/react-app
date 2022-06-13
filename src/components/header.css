@@ -169,3 +169,25 @@
     font-size: 15px;
     font-weight: 600;
 }
+.cart{
+    color: blue;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+}
+.box{
+    position: absolute;
+    font-weight: bold;
+    color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    left: 60px;
+}

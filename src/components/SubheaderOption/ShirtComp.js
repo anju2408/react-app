@@ -9,7 +9,7 @@ export default function ShirtComp({ data }) {
         <>
             <div className='parent'>
                 {
-                    data.map((ele) => {
+                    data.shirtData.map((ele) => {
                         return (
                             <div className='card'>
                                 <div className='divImage'>
@@ -25,7 +25,8 @@ export default function ShirtComp({ data }) {
                                         ({ele.priceDiscount}% off)</div>
                                     <div><img src='images/prime.png' className='img-prime' /></div>
                                     <div className='para-2'>FREE Delivery by Amazon</div>
-                                    <button className='btn-add'>Add to Cart</button>
+                                    <div className='quantity'>{ele.quantity}</div>
+                                    <button onClick={() => data.addToCart(ele)}>Add to Cart</button>
                                 </div>
                             </div>
                         )

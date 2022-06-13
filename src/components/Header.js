@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 // import amazonImg from '../images/amazon.jpg';
 {/* import amazonImg is a key of js from src folder */ }
 
-export default function Header({setInputState}) {
-    function manageInput(e){
-        let {value} = e.target;
+export default function Header({ setInputState }) {
+    function manageInput(e) {
+        let { value } = e.target;
         console.log(value);
         setInputState(value);
     }
@@ -85,7 +85,7 @@ export default function Header({setInputState}) {
                     <input type="text" onChange={manageInput} />
                     <span className="search-icon"><i className="fa fa-search" aria-hidden="true"></i></span>
                 </div>
-                <div className="img1-container">
+                {/* <div className="img1-container">
                     <img src="/images/flag.jpg" />
                     <i className="fa fa-caret-down" aria-hidden="true"></i>
                 </div>
@@ -96,10 +96,14 @@ export default function Header({setInputState}) {
                 <div className="content1-container">
                     <div className="hello-sign-in">Returns</div>
                     <div className="account">& Orders</div>
-                </div>
-                <div className="img-container img2-container">
+                </div> */}
+                {/* <div className="img-container img2-container">
                     <img src="/images/cart.png" />
                     <div>Cart</div>
+                </div> */}
+                <div className='cart'>
+                    <Link to="/cartpage" > <div>Cart</div></Link>
+                    <div className='box'>{setInputState.cart.length}</div>
                 </div>
             </div>
         </>

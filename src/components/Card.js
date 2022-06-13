@@ -16,7 +16,7 @@ import './card.css';
 // map => it return an array which is qual to original array in length but changes occurs in value
 
 export default function Card({inputState}) {
-    let filteredData = data.filter(ele=>ele.type.includes(inputState.toLowerCase()));
+    let filteredData = data.filter(ele=>ele.type.includes(inputState.inputState.toLowerCase()));
     return (
         <>
             <div className='parent'>
@@ -38,7 +38,9 @@ export default function Card({inputState}) {
                                         ({ele.priceDiscount}% off)</div>
                                     <div><img src='images/prime.png' className='img-prime' /></div>
                                     <div className='para-2'>FREE Delivery by Amazon</div>
-                                    <button className='btn-add'>Add to Cart</button>
+                                    <div className='quantity'>{ele.quantity}</div>
+                                     {/* we have to put a arrow funciton in order to call a function directly in inline onclick*/}
+                                    <button className='btn-add' onClick={()=>inputState.addToCart(ele)}>Add to Cart</button>
                                 </div>
                             </div>
                         )
@@ -58,7 +60,8 @@ export default function Card({inputState}) {
                                         ({ele.priceDiscount}% off)</div>
                                     <div><img src='images/prime.png' className='img-prime' /></div>
                                     <div className='para-2'>FREE Delivery by Amazon</div>
-                                    <button className='btn-add'>Add to Cart</button>
+                                    <div className='quantity'>{ele.quantity}</div>
+                                    <button className='btn-add' onClick={()=>inputState.addToCart(ele)}>Add to Cart</button>
                                 </div>
                             </div>
                         )
