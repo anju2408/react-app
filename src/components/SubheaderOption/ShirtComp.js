@@ -26,7 +26,7 @@ export default function ShirtComp({ data }) {
                                     <div><img src='images/prime.png' className='img-prime' /></div>
                                     <div className='para-2'>FREE Delivery by Amazon</div>
                                     <div className='quantity'>{ele.quantity}</div>
-                                    <button onClick={() => data.addToCart(ele)}>Add to Cart</button>
+                                    <button className='btn-add' onClick={() => data.addToCart(ele)}>Add to Cart</button>
                                 </div>
                             </div>
                         )
