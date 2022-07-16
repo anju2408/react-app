@@ -11,7 +11,7 @@ export default function ShirtComp({ data }) {
                 {
                     data.shirtData.map((ele) => {
                         return (
-                            <div className='card'>
+                            <div className='card' key={ele.id}>
                                 <div className='divImage'>
                                     <img src={ele.image} className='img-card' />
                                 </div>

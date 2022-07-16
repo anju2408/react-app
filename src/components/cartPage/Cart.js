@@ -12,7 +12,7 @@ export default function Cart({ cart }) {
                         :
                         cart.cart.map((ele) => {
                             return (
-                                <div className='cart-container'>
+                                <div className='cart-container' key={ele.id}>
                                     <div className='container'>
                                         <img src={ele.image} />
                                     </div>

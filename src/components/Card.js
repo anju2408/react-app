@@ -24,7 +24,7 @@ export default function Card({inputState}) {
                     filteredData.length==0?
                     data.map((ele) => {
                         return (
-                            <div className='card'>
+                            <div className='card' key={ele.id}>
                                 <div className='divImage'>
                                     <img src={ele.image} className='img-card' />
                                 </div>
@@ -46,7 +46,7 @@ export default function Card({inputState}) {
                         )
                     }) :filteredData.map((ele)=>{
                         return (
-                            <div className='card'>
+                            <div className='card' key={ele.id}>
                                 <div className='divImage'>
                                     <img src={ele.image} className='img-card' />
                                 </div>
